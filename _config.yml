@@ -5,5 +5,3 @@ paginate: 5
 paginate_pate: "/blog/page:num/"
 plugns:
   - jekyll-sitemap
-
-theme: jekyll-theme-modernist
