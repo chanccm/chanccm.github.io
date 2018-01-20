@@ -12,7 +12,7 @@ notes: active
 				</info>
 			</h2>
 			<div class="tag">
-				Tags:
+        <i class="fa fa-tags" aria-hidden="true"></i>
 				{% for tag in page.tags %}
 					<a href="#{{ tag | slugify }}"> {{ tag }} </a>
 				{% endfor %}
@@ -20,6 +20,7 @@ notes: active
 			
 			<!-- Post content -->
 			<div class="notebody">
+        <hr/>
 				{{ content }}
 			</div>
 			<!-- Post info -->
