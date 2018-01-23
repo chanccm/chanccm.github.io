@@ -13,8 +13,8 @@ notes: active
 			</h2>
 			<div class="tag">
         <i class="fa fa-tags" aria-hidden="true"></i>
-				{% for tag in page.tags %}
-					<a href="#{{ tag | slugify }}"> {{ tag }} </a>
+				{% for category in page.categories %}
+					<a href="{{ site.baseurl }}/{{ 'categories' }}/#{{ category | slugify }}"> {{ category }} </a>
 				{% endfor %}
 			</div>
 			

@@ -2,7 +2,7 @@
 layout: post
 title: "How (do I plan) to get comfortable with Data Science as a Biologist"
 date: 2018-01-14
-tags: [datascience]
+categories: [datascience]
 ---
 
 I started with learning the programming language Python, and started with something easy:

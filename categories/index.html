@@ -1,0 +1,25 @@
+---
+layout: default
+permalink: /categories
+title: Categories
+---
+  <h1>{{ page.title }}</h1>
+
+<div id="archives">
+{% assign sortedCategories = site.categories | sort %}
+{% for category in sortedCategories %}
+  <div class="archive-group">
+    {% capture category_name %}{{ category | first }}{% endcapture %}
+    <div id="#{{ category_name | slugize }}"></div>
+    <h3 class="category-head">{{ category_name }}</h3>
+    <a name="{{ category_name | slugize }}"></a>
+    {% assign sortedPosts = site.categories[category_name] | sort: 'date' | reverse %}
+    {% for post in sortedPosts %}
+      <ul class="posts">
+        <li>
+          <span>{{ post.date | date_to_string }}</span> <i class="fa fa-caret-right" aria-hidden="true"></i> <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+      </ul>
+    {% endfor %}
+  </div>
+{% endfor %}
+</div>

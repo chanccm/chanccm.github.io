@@ -7,8 +7,9 @@ title: Science Geek in Japan
     <i class="fa fa-flask" aria-hidden="true" style="color:dodgerblue"></i> 
   </h1>
 	<ul class="posts">
-
 	  {% for post in site.posts %}
 	    <li><span>{{ post.date | date_to_string }}</span> <i class="fa fa-caret-right" aria-hidden="true"></i> <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
 	  {% endfor %}
 	</ul>
+
+  

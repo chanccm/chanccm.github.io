@@ -2,7 +2,7 @@
 layout: post
 title: "I cannot keep spoiling the horse!!"
 date: 2018-01-14
-tags: [horse]
+categories: [horse]
 ---
 
 Croft is...was one of the best horses at the riding club, until I was partnered up with him I guess.
