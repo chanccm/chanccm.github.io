@@ -2,9 +2,10 @@ name: Carmen Chan, PhD
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
 paginate: 5
-paginate_pate: "/blog/page:num/"
+paginate_path: "/blog/page:num/"
 highlighter: rouge
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-paginate
   

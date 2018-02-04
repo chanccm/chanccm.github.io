@@ -6,10 +6,33 @@ title: Science Geek in Japan
     <i class="fa fa-heart" aria-hidden="true" style="color:deeppink"></i> 
     <i class="fa fa-flask" aria-hidden="true" style="color:dodgerblue"></i> 
   </h1>
+<!--
 	<ul class="posts">
 	  {% for post in site.posts %}
 	    <li><span>{{ post.date | date_to_string }}</span> <i class="fa fa-caret-right" aria-hidden="true"></i> <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
 	  {% endfor %}
 	</ul>
+-->
 
+<!-- This loops through the paginated posts -->
+<ul class="posts">
+	  {% for post in paginator.posts %}
+	    <li><span>{{ post.date | date_to_string }}</span> <i class="fa fa-caret-right" aria-hidden="true"></i> <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+	  {% endfor %}
+</ul>
+
+<!-- Pagination links -->
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+  {% else %}
+    <span class="previous">Previous</span>
+  {% endif %}
+  <span class="page_number">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+  {% else %}
+    <span class="next">Next</span>
+  {% endif %}
+</div>
   

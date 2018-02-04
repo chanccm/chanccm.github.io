@@ -66,3 +66,11 @@ h2.date {
   margin-right: 30px;
 }
 
+span.page_number{
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+pagination{
+  margin-left: 20rem;
+}
