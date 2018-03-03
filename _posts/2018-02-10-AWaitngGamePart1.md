@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "A simple prediction problem Part I"
+title: "A Waiting Game Part 1"
 date: 2018-02-10
 categories: [datascience, research, data-visualization, japanese]
 ---
