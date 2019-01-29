@@ -10,7 +10,7 @@ categories: [Python, datascience, social media, web scraping]
 
 **What do people watch on Youtube?** I got curious as I learn how to analyze social media data. So I go to [SocialBlade](https://socialblade.com), look at the "Top 500 YouTube Influential YouTube Channels (sorted by SB rank)", and apply the lxml parser to generate the above data. In other words, I need to extract data from a website by web scraping, followed by cleaning up and organizing the data into a format (dataframe) that I can use.
 
-First, to get a table of the name of YouTube channels, number of views and subscribers
+First, to get a table of the names of the top 500 YouTube channels, number of views and subscribers,
 
 {% highlight python %}
 
@@ -34,7 +34,7 @@ for t in table_data:
 
 {% endhighlight %}
 
-The first entry of the list is something like: 
+The first entry of the list looks something like: 
 
 13th
 
@@ -49,6 +49,9 @@ Toys and Colors
 
 4,637,771,013 
 
+</br>
+</br>
+
 Next, I convert the list 'col' into a dataframe:
 
 {% highlight python %}
@@ -58,16 +61,17 @@ import pandas as pd
 df = pd.DataFrame(col)
 
 {% endhighlight %}
-<br/>
-                                                  0
+
+All information that I need is contained in 1 column of data:
+0
 0   \n1st\n\nA++ \n\n\nT-Series\n\n\n13,062\n\n82,...
 
-The third step is to The information extract the information contained in that one long string of text. Need to ignore the unimportant parts , and split them up into individual columns of data:
+The third step is to extract the information contained in that one long string of text, and put into separate columns in the dataframe. Need to ignore the unimportant parts, and split them up:
 
 {% highlight python %}
 df1 = df[0].str.split('\n', expand=True)
 
-# (Need to further clean up the dataframe, because the original table on the website is misaligned. Some entries have more columns than others. I will skip those steps here)
+# (Need to further clean up the dataframe, because the original table on the website is misaligned. Some entries have more columns than others. And there were columns that do not contain data, so they need to be cut out. I will skip those steps here.)
 
 # Give proper names to each column:
 df1.columns = ['Rank', 'Grade', 'Username', 'Uploads', 'Subs', 'Video Views']
@@ -107,11 +111,10 @@ df1['Category'] = table_data_list_category
     
 {% endhighlight %} 
 
-Importantly, next find out the sum of subscription and views for each category after grouping YouTube channels of the same category together:
+Importantly, the next step is to find out the sum of the number of subscription and views for each category, after grouping YouTube channels of the same category together:
 
 {% highlight python %}
 Num_Subs_by_Category = df1.Subs.groupby(df1['Category']).sum().sort_values(ascending= False)/1000000
-
 
 Num_Views_by_Category = df1['Video Views'].groupby(df1['Category']).sum().sort_values(ascending= False)/1000000
 
@@ -137,4 +140,4 @@ plt.show()
 
 {% endhighlight %} 
 
-Looks like music and entertainment have the most subscribers and views. Next to these, people watch games and look up information about file(movies) on YouTube. Education (including shows designed for toddlers, young children)- related channels are pretty high up as well. Contrary to popular believe about people are watching cute cats all day on YouTube, the 'animal' class falls outside of the top 10 most popular categories.
+Looks like music and entertainment have the most subscribers and views. Next to these, people watch games and look up information about file(movies) on YouTube. Education (including shows designed for toddlers, young children)- related channels are pretty high up as well. Contrary to popular believe about people are watching cute cats all day long on YouTube, the 'animal' class falls outside of the top 10 most popular categories.
