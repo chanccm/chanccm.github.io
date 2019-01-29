@@ -2,7 +2,7 @@
 layout: post
 title: "A Waiting Game Part 2"
 date: 2018-02-25
-categories: [datascience, research, data-visualization]
+categories: [Python, datascience, research, data-visualization]
 ---
 
 Now comes the fun part! Is it possible to guess the nationality and gender of a person, if I know how long he/she is willing to wait for someone, or make someone wait?

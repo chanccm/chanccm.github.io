@@ -2,7 +2,7 @@
 layout: post
 title: "How to Visualize Biological Data Using a Heatmap"
 date: 2018-01-18
-categories: [datascience, research, data-visualization]
+categories: [Python, datascience, research, data-visualization]
 ---
 
 One day, a good friend of mine gave me some of her data to play with. These were measurements of neurite growth rate from wildtype and transgenic animals. To get this data, she had to do 'live-imaging' of neurons, meaning that she put neurons in a culture dish filled with nutrient broth, provided a nice warm moist environment while taking pictures of them every minute, for set periods of time, say a few hours. It takes patience and meticulousnous, as is true for a lot of biological experiments.

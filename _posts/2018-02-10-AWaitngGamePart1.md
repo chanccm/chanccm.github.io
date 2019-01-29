@@ -2,7 +2,7 @@
 layout: post
 title: "A Waiting Game Part 1"
 date: 2018-02-10
-categories: [datascience, research, data-visualization, japanese]
+categories: [Python, datascience, research, data-visualization, japanese]
 ---
 
 I got a fun homework from my Japanese lesson. The sensei wanted me to practice talking to people in Japanese, and to practice the use of active and passive verb forms.

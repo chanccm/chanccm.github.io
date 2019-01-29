@@ -2,7 +2,7 @@
 layout: post
 title: "Decision Tree"
 date: 2018-05-02
-categories: [datascience, prediction]
+categories: [Python, datascience, prediction]
 ---
 
 This time I want to try my hands on using Decision Tree to make predictions.

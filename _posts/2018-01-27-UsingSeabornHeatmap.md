@@ -2,7 +2,7 @@
 layout: post
 title: "Using Seaborn Heatmap"
 date: 2018-01-27
-categories: [datascience, research, data-visualization]
+categories: [Python, datascience, research, data-visualization]
 ---
 
 After talking to my friend (the one who gave me her neurite growth rate data to play with), she suggested to improve the presentation a little.

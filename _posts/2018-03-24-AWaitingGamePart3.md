@@ -2,7 +2,7 @@
 layout: post
 title: "A Waiting Game Part 3"
 date: 2018-03-24
-categories: [datascience, research, data-visualization]
+categories: [Python, datascience, research, data-visualization]
 ---
 
 Sometimes in trying to obtain the most useful set of features for predicting an outcome may require us to define new features based on the existing ones. I learnt this from the ['Pytanic' tutorial on kaggle, by Heads or Tails.](https://www.kaggle.com/headsortails/pytanic)
